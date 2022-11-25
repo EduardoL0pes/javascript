@@ -33,12 +33,13 @@
         window.alert ('A soma dos dois valores é ' + s) */
 
 
-        /***** Exemplo 3 - Sintaxe que simplifica os dois exemplos anteriores */
-
+        /***** Exemplo 3 - Sintaxe que simplifica os dois exemplos anteriores e 
+        utilizando tambem um template string ${}  OBS: Utilizar CRASE no lugar das aspas simples ou duplas */
+        
         var n1 = Number(window.prompt('Digite um Número ')) //String
         var n2 = Number(window.prompt('Digite outro número ')) //String
         var s = n1 + n2 
-        window.alert('A soma dos dois valores são de ' + s + ', ' + ' Obrigado por fazer o teste :D ') //Concatenação
+        window.alert(`A soma entre ${n1} e ${n2} é igual a ${s}`) //Concatenação
         //(number + number) para adição
         //(string + string) para concatenação
 
