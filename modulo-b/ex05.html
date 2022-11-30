@@ -14,12 +14,52 @@
     </style>
 </head>
 <body>
-    <h1>Iniciando estudos com DOM</h1>
+    <h1 name="til">Iniciando estudos com DOM</h1>
+    <h2 class="ale">Testanto alerta</h2>
     <p>Aqui vai o resultado</p>
     <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
-    <div>Clique em mim</div>
+    <div id="msg">Clique em mim</div>
+    <br>
     <script>
+        /*  exercício de fixação
+         window.alert('seja bem vindo')
+         window.confirm('esta gostando?')
+         window.prompt('deixei seu nome') 
+
+         var nome = window.prompt('deixe seu nome')
+         window.alert('seja bem vindo, ' + nome + ' :D') 
+
+         var nome = window.prompt('deixe seu nome')
+         window.alert(`Seja bem vindo, ${nome} :D`)
+         document.write(`${nome} seu nome tem ${nome.length} letras</br>`)
+         document.write(`Seu nome em maiuscula é ${nome.toUpperCase()}</br>`)
+         document.write(`e seu nome em minuscula é ${nome.toLowerCase()}`)
+
+         var nome = window.prompt('Digite seu nome')
+         var n1 = Number(window.prompt('digite um numero'))
+         var n2 = Number(window.prompt('digite outro numero'))
+         var s = n1 + n2 
+         window.alert(`A soma entre ${n1} e ${n2} são de ${s}, Obrigado por realizar o teste ${nome.toUpperCase()}`)  */
+        
+         var corpo = window.document.body
+         corpo.style.background = 'black'
+
+         var h1 = window.document.getElementsByName('til')[0]
+         h1.style.background = 'green'
+         h1.innerText = 'Manipulando Titulo'
+
+         var p1 = window.document.getElementsByTagName('p')[0]
+         window.document.write(p1.innerText + ': Vivendo e aprendendo</br>')
+
+         var p2 = window.document.getElementsByTagName('p')[1]
+         window.document.write('Herdando negrito com innerHTML: ' + p2.innerHTML )
+
+         var iv = window.document.querySelector('div#msg')
+         iv.style.background = 'gray'
+         iv.style.color = 'blue'   
          
+         var h2 = window.document.getElementsByClassName('ale')[0]
+         window.alert(h2.innerText + ' É so isso para hoje')
     </script>
 </body>
 </html>
