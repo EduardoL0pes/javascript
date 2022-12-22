@@ -14,6 +14,18 @@
             line-height: 200px;
             text-align: center;
         }
+
+        body {
+            font: normal 1.2em arial;
+        }
+
+        input[type='number'] {
+            width: 100px;
+        }
+
+        div#res {
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
@@ -22,16 +34,38 @@
     <p>Exemplo 2 de <strong>DOM</strong></p>
     <div id="test">
         Exemplo 3 de DOM 
-    </div> -->
+    </div> 
 
-    <div id="area" onclick="clicou()" onmouseenter="entrar()" onmouseout="sair()">
+
+    <div id="area">
 
         interaja...
 
-    </div>
+    </div> -->
+
+    <h1>Somando Valores</h1>
+    <input type="number" name="txtn1" id="txtn1">
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="somar" onclick="somar()">
+    <div id="res">Resultado</div>
 
     <script>
-        var a = document.getElementById('area');
+        function somar() {
+            var txt1 = document.getElementById('txtn1')
+            var txt2 = document.querySelector('input#txtn2')
+            var res = document.getElementById('res')
+            var n1 = Number.parseFloat(txt1.value)
+            var n2 = Number.parseFloat(txt2.value)
+            var s = n1 + n2 
+            res.innerHTML = `A soma de ${n1} e ${n2} é igual a <strong>${s}</strong>`
+        }
+
+
+       /*  var a = document.getElementById('area');
+
+        a.addEventListener('click', clicou);
+        a.addEventListener('mouseenter', entrar);
+        a.addEventListener('mouseout', sair);
 
         function clicou() {
             a.innerText = 'clicou!'
@@ -49,7 +83,7 @@
             a.style.background = 'green'
         }
 
-      /* var corpo = window.document.body
+        var corpo = window.document.body
         var p1 = window.document.getElementsByTagName('p')[1]
         corpo.style.backgroundColor = 'green'
         window.document.write('Esse é o ' + p1.innerHTML)
