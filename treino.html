@@ -5,16 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        div#area {
+            font: normal 1.2em arial;
+            background-color: green;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <h1 name="titulo">Estou Aprendendo <strong class="escuro">DOM</strong> em JavaScript</h1>
+   <!-- <h1 name="titulo">Estou Aprendendo <strong class="escuro">DOM</strong> em JavaScript</h1>
     <p>Exemplo 1 de DOM</p>
     <p>Exemplo 2 de <strong>DOM</strong></p>
     <div id="test">
         Exemplo 3 de DOM 
+    </div> -->
+
+    <div id="area" onclick="clicou()" onmouseenter="entrar()" onmouseout="sair()">
+
+        interaja...
+
     </div>
+
     <script>
-      /*   var corpo = window.document.body
+        var a = document.getElementById('area');
+
+        function clicou() {
+            a.innerText = 'clicou!'
+            a.style.background = 'tomato'
+        }
+
+        function entrar() {
+            a.innerText = 'entrou!'
+            a.style.color = 'white'
+            a.style.background = 'blue'
+        }
+
+        function sair() {
+            a.innerText = 'saiu!'
+            a.style.background = 'green'
+        }
+
+      /* var corpo = window.document.body
         var p1 = window.document.getElementsByTagName('p')[1]
         corpo.style.backgroundColor = 'green'
         window.document.write('Esse é o ' + p1.innerHTML)
@@ -29,7 +64,6 @@
         var sub = window.document.getElementsByClassName('escuro')[0]
         sub.style.color = 'white'
 
-        
         window.alert('Seja Bem Vindoo!');
         window.confirm('Esta gostando?');
         window.prompt('deixe sua mensagem para nós'); 
