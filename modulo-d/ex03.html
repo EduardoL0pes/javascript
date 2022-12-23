@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN/País</title>
+</head>
+<body>
+   <!-- <h1>Sistema de Multas</h1>
+    Velocidade do carro: <input type="number" name="txtvel" id="txtvel">
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res">
+
+    </div>-->
+
+    <h1>Fixação e treino</h1>
+    Pais que você mora: <input type="text" name="txtp" id="txtp">
+    <input type="button" value="Verificar" onclick="pesquisar()">
+    <div id="res">
+
+    </div>
+    <script>
+        function pesquisar() {
+            var txtpa = document.querySelector('input#txtp')
+            var res = document.querySelector('div#res')
+            var nac = txtpa.value
+            res.innerHTML = `<p>Seu pais atual é <strong>${nac}</strong></p>`
+            if (nac == 'Brasil' || nac == 'brasil') {
+                res.innerHTML += `Então você é Brasileiro(a)!`
+        } else {
+            res.innerHTML += `Então você é Estrangeiro(a)!`
+        }}
+
+       /* function calcular() {
+            var txtv = document.getElementById('txtvel')
+            var res = document.querySelector('div#res')
+            var vel = Number(txtv.value)
+            res.innerHTML = `<p>Sua velocidade atual é de <strong>${vel}Km/h</strong></p>`
+            if (vel > 60) {
+                res.innerHTML += `<p>Você está <strong>MULTADO</strong> por excesso de velocidade.</p>`
+            }
+            res.innerHTML += `<p>Dirija sempre com cinto de segurança!</p>`
+        } */
+    </script>
+</body>
+</html>
