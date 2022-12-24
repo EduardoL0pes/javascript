@@ -9,9 +9,67 @@
         body {
             font: normal 1.2em trebouchet MS;
         }
+
+        input[type='number'] {
+            width: 100px;
+        }
+
+        div#res {
+            margin-top: 10px;
+        }
+
+        div#quadrado {
+            line-height: 200px;
+            text-align: center;
+            width: 200px;
+            height: 200px;
+            background-color: black;
+            color: white;
+            margin-top: 30px;
+        }
     </style>
 </head>
 <body>
+    <h1>Somando Valores</h1>
+    <input type="number" name="txtn1" id="txtn1"> +
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="somar" onclick="soma()">
+    <div id="res">Resultado</div>
+
+    <div id="quadrado">interaja</div>
+
+    <script>
+    function soma() {
+        var txt1 = document.getElementById('txtn1')
+        var txt2 = document.querySelector('input#txtn2')
+        var res = document.getElementById('res')
+        var n1 = Number(txt1.value)
+        var n2 = Number(txt2.value)
+        var s = n1 + n2 
+        res.innerHTML = `A soma de ${n1} e ${n2} é igual a <strong>${s}</strong>`   
+    }
     
+
+    var a = document.getElementById('quadrado')
+
+    a.addEventListener('click', clicou)
+    a.addEventListener('mouseenter', entrou)
+    a.addEventListener('mouseout', saiu)
+
+    function clicou() {
+        a.style.background = 'blue'
+        a.innerText = 'Clicou!'
+    }
+
+    function entrou() {
+        a.style.background = 'green'
+        a.innerText = 'Ola!'
+    }
+
+    function saiu() {
+        a.style.background = 'black'
+        a.innerText = 'Saiu!'
+    }   
+    </script>
 </body>
 </html>
