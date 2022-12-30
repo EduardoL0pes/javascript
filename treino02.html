@@ -27,7 +27,12 @@
     <div id="res">Resultado</div>
     <script>
         var nome = prompt('Digite seu nome')
-        alert('Seja Bem vindo, ' + nome + ' !, voce esta pronto para realizar o teste?')
+        //alert('Seja Bem vindo, ' + nome + ' !, voce esta pronto para realizar o teste?')
+        if (prompt == 'nome') {
+            alert.innerHTML += `Seja Bem Vindo, ${nome}!, você esta pronto para realizar o teste ?`
+        } else {
+            alert.innerHTML += 'Seja Bem Vindo!, esta pronto para realizar o teste ?'
+        }
 
         function somar() {
             var txt1 = document.getElementById('txtn1')
