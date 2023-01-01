@@ -21,18 +21,14 @@
 </head>
 <body>
     <h1>Somando Valores</h1>
+    <p>Digite abaixo quanto é 5 + 5</p>
     <input type="number" name="txtn1" id="txtn1"> +
     <input type="number" name="txtn2" id="txtn2">
     <input type="button" value="somar" onclick="somar()">
     <div id="res">Resultado</div>
     <script>
         var nome = prompt('Digite seu nome')
-        //alert('Seja Bem vindo, ' + nome + ' !, voce esta pronto para realizar o teste?')
-        if (prompt == 'nome') {
-            alert.innerHTML += `Seja Bem Vindo, ${nome}!, você esta pronto para realizar o teste ?`
-        } else {
-            alert.innerHTML += 'Seja Bem Vindo!, esta pronto para realizar o teste ?'
-        }
+        alert(`Seja Bem vindo, ${nome.toLocaleUpperCase()}!, voce esta pronto para realizar o teste?`)
 
         function somar() {
             var txt1 = document.getElementById('txtn1')
@@ -42,6 +38,11 @@
             var n2 = Number(txt2.value)
             var s = n1 + n2
             res.innerHTML = `A soma de ${n1} mais ${n2} é igual a <strong>${s}</strong>`
+            if (s == 10) {
+                res.innerHTML = 'Parabéns você passou no teste!'
+            } else {
+                res.innerHTML = 'Infelizmente você reprovou no teste. :('
+            }
         }
     </script>
 </body>
