@@ -20,13 +20,48 @@
     </style>
 </head>
 <body>
-    <h1>Somando Valores</h1>
+   <!-- <h1>Somando Valores</h1>
     <p>Digite abaixo quanto é 5 + 5</p>
     <input type="number" name="txtn1" id="txtn1"> +
     <input type="number" name="txtn2" id="txtn2">
     <input type="button" value="somar" onclick="somar()">
-    <div id="res">Resultado</div>
+    <div id="res">Resultado</div> 
+
+    <h1>Sistema de Multa</h1>
+    Velocidade do carro: <input type="number" name="txtvel" id="txtvel">
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res"></div> -->
+
+    <h1>País de Origem</h1>
+    <input type="text" name="txtp" id="txtp">
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res"></div>
+
     <script>
+        function calcular() {
+            var txt = document.querySelector('input#txtp')
+            var res = document.getElementById('res')
+            var ori = txt.value
+            res.innerHTML = `Seu pais de origem é <strong>${ori.toUpperCase()}!</strong>`
+            if (ori == 'Brasil' || ori == 'brasil') {
+                res.innerHTML += `<p>Então você é Brasileiro!</p>`
+            } else {
+                res.innerHTML += `<p>Então você é Estrangeiro!</p>`
+            }
+        }
+
+
+    /*  function calcular() {
+        var txtv = document.getElementById('txtvel')
+        var res = document.getElementById('res')
+        var vel = Number(txtv.value)
+        res.innerHTML = `<p>Sua velocidade atual é de <strong>${vel}Km/h</strong></p>`
+        if (vel > 60) {
+            res.innerHTML += `<p>Você esta <strong>MULTADO</strong> por excesso de velocidade!</p>`
+        }
+        res.innerHTML += `<p>Dirija sempre com cinto de segurança!</p>`
+    }
+
         var nome = prompt('Digite seu nome')
         alert(`Seja Bem vindo, ${nome.toLocaleUpperCase()}!, voce esta pronto para realizar o teste?`)
 
@@ -43,7 +78,7 @@
             } else {
                 res.innerHTML = 'Infelizmente você reprovou no teste. :('
             }
-        }
+        } */
     </script>
 </body>
 </html>
