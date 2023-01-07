@@ -7,6 +7,7 @@ body {
 
 header {
     text-align: center;
+    color: white;
 }
 
 section {
@@ -36,4 +37,5 @@ footer {
     text-align: center;
     font-style: italic;
     font-weight: lighter;
+    color: white;
 }
