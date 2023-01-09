@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+body {
+    background-color: gray;
+    font: normal 1.2em trebouchet, sans-serif;
+    text-align: center;
+}
+
+h1, footer {
+    font-weight: bolder;
+    color: white;
+}
+
+section {
+    background-color: white;
+    border-radius: 10px;
+    width: 500px;
+    margin: auto;
+    padding: 10px;
+}
+
+footer {
+    font:normal 0.9em italic;
+
+}
