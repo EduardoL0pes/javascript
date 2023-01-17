@@ -24,3 +24,7 @@ footer {
     text-align: center;
     font-style: italic;
 }
+
+input[type='button'] {
+    margin: 5px 0 10px 0;
+}

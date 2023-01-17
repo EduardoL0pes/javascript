@@ -12,23 +12,23 @@
         <h1>Vamos Contar</h1>
     </header>
     <section>
-        <div>
+        <div id="dados">
             <p>Início:
-                <input type="number" name="inicio" id="inicio">
+                <input type="number" name="inicio" id="txti">
                 <label for="inicio"></label>
             </p> 
             <p>Fim:
-                <input type="number" name="fim" id="fim">
+                <input type="number" name="fim" id="txtf">
                 <label for="fim"></label>
             </p>
             <p>Passo:
-                <input type="number" name="passo" id="passo">
+                <input type="number" name="passo" id="txtp">
                 <label for="passo"></label>
             </p>
-            <input type="button" value="Contar">
+            <input type="button" value="Contar" onclick="conta()">
         </div>
         <div id="res">
-            <p>Carregando Contagem...</p>
+            Preparando Contagem...
         </div>
     </section>
     <footer>
