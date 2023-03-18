@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores Lógicos</title>
+    <script>
+        /*
+
+        E (&&) - Verdadeiro se todas as expressões forem verdadeiras
+        OU(||) - Verdadeiro se pelo menos uma das expressões for verdadeira
+        Negação - Inverte o resultado da expressão de comparação
+
+        */
+
+        /*
+        //true && false = falso
+        if (2 == 2 && 3 >= 5) {
+            document.write('Verdadeiro')
+        } else (
+            document.write('Falso')
+        )
+
+        //false || true = true
+        if (2 == 1 || 4 >= 2) {
+            document.write('<br>Verdadeiro')
+        } else (
+            document.write('Falso')
+        )
+
+        //true (mas com a '!' inverte o resultado) = falson
+        if (!(2 == 2)) {
+            document.write('Verdadeiro')
+        } else (
+            document.write('<br>falson')
+        )*/
+        
+        
+        var nota = prompt('Digite a nota do aluno:')
+        var faltas = prompt('Digite a quantidade de faltas:')
+        var media = 7
+        var mediaFalta = 10
+        /*
+        if (nota >= media && faltas <= mediaFalta) {
+            document.write('Aprovado')
+        } else (
+            document.write('Reprovado')
+        ) */
+
+        //Oparador ¨ternário¨
+        var resultado = (nota >= media && faltas <= mediaFalta) ? 'Aprovado' : 'Reprovado'
+        document.write(resultado)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
