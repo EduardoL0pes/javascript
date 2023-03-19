@@ -16,23 +16,24 @@
         altura /= 100
 
         var M = peso / (altura * altura)
+        //var classificacao =""
 
         if (M < 16) {
-            classificacao = ('Baixo peso muito grave')
-        } else if (M <= 16.99) {
-            classificacao=('Baixo peso grave')
-        } else if (M >= 17 && M <= 18,49) {
-            classificacao=('Baixo peso')
-        } else if (M >= 18,50 && M <= 24,99) {
-            classificacao=('Peso normal')
-        } else if (M >= 25 && M <= 29,99) {
-            classificacao=('Sobrepeso')
-        } else if (M >= 30 && M <= 34,99) {
-            classificacao=('Obesidade grau 1')
-        } else if (M >= 35 && M <= 39,99) {
-            classificacao=('Obesidade grau 2')
+            classificacao='Baixo peso muito grave'
+        } else if (M >= 16 && M <= 16.99) {
+            classificacao='Baixo peso grave'
+        } else if (M >= 17 && M <= 18.49) {
+            classificacao='Baixo peso'
+        } else if (M >= 18.50 && M <= 24.99) {
+            classificacao='Peso normal'
+        } else if (M >= 25 && M <= 29.99) {
+            classificacao='Sobrepeso'
+        } else if (M >= 30 && M <= 34.99) {
+            classificacao='Obesidade grau 1'
+        } else if (M >= 35 && M <= 39.99) {
+            classificacao='Obesidade grau 2'
         } else {
-            classificacao=('Obesidade grau 3')
+            classificacao='Obesidade grau 3'
         }
 
         document.write(nome + ' possui índice de massa corporal igual a ' + M + ', sendo classificado como: ' + classificacao)
