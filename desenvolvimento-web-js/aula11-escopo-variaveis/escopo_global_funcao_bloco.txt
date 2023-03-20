@@ -1,0 +1,29 @@
+JavaScript tem três níveis de escopo de variáveis:
+
+Escopo Global
+
+Escopo de Função
+
+Escopo de Bloco (disponível a partir do ES6)
+
+Escopo Global:
+Variáveis declaradas fora de qualquer função ou bloco de código são variáveis globais. Essas variáveis podem ser acessadas de qualquer lugar do seu código, dentro ou fora de funções ou blocos de código. No entanto, usar muitas variáveis globais pode tornar seu código menos legível e mais difícil de depurar.
+
+
+Escopo de Função:
+Variáveis declaradas dentro de uma função são variáveis locais. Essas variáveis só podem ser acessadas dentro da função. Variáveis locais têm precedência sobre variáveis globais com o mesmo nome. Isso significa que, se você tiver uma variável local com o mesmo nome que uma variável global, a variável local será usada.
+
+
+Escopo de Bloco:
+A partir do ES6 (EcmaScript 2015), o JavaScript também tem o escopo de bloco. Isso significa que as variáveis declaradas dentro de um bloco de código (por exemplo, dentro de um loop for, if statement ou switch statement) só podem ser acessadas dentro desse bloco. Isso ajuda a evitar problemas com variáveis que podem ser reutilizadas fora de seu contexto original.
+
+
+
+
+O escopo de bloco e função em JavaScript compartilham algumas semelhanças. Ambos são escopos locais, o que significa que as variáveis declaradas dentro deles só podem ser acessadas dentro do próprio escopo.
+
+No entanto, há uma diferença importante entre eles: o escopo de função é criado quando uma nova função é declarada, enquanto o escopo de bloco é criado quando um novo bloco de código é iniciado (por exemplo, em uma instrução if, for ou while). Além disso, o escopo de bloco só está disponível a partir do ES6, enquanto o escopo de função está disponível desde as primeiras versões do JavaScript.
+
+Outra diferença importante é que as variáveis declaradas com var dentro do escopo de função são elevadas (hoisted) para o topo do escopo, o que significa que podem ser acessadas antes mesmo de serem declaradas. Já as variáveis declaradas com let ou const dentro do escopo de bloco não são elevadas e só podem ser acessadas após a declaração.
+
+Em resumo, enquanto o escopo de bloco e função têm algumas semelhanças, é importante entender as diferenças entre eles para escrever um código JavaScript eficiente e correto.
