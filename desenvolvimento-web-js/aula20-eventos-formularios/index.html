@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos - Formulários</title>
+    <script>
+        /*Eventos:
+            onfocus  - foco ao elemento                (OBS: estudar mais sobre esses elementos e utilização)
+            onblur   - tirar o foco do elemento
+            onchange - modificar o estado do elemento
+        */
+
+    </script>
+</head>
+<body>
+    <input onfocus="console.log('evento foco disparado')" onblur="console.log('retirando foco com blur')" type="text">
+
+    <select onchange="console.log('Evento disparado')">
+        <option>-- Selecionar --</option>
+        <option value="1">Primeira opção</option>
+        <option value="2">Segunda opção</option>
+        <option value="3">Terceira opção</option>
+    </select>
+</body>
+</html>
