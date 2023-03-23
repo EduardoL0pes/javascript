@@ -24,6 +24,6 @@ O escopo de bloco e função em JavaScript compartilham algumas semelhanças. Am
 
 No entanto, há uma diferença importante entre eles: o escopo de função é criado quando uma nova função é declarada, enquanto o escopo de bloco é criado quando um novo bloco de código é iniciado (por exemplo, em uma instrução if, for ou while). Além disso, o escopo de bloco só está disponível a partir do ES6, enquanto o escopo de função está disponível desde as primeiras versões do JavaScript.
 
-Outra diferença importante é que as variáveis declaradas com var dentro do escopo de função são elevadas (hoisted) para o topo do escopo, o que significa que podem ser acessadas antes mesmo de serem declaradas. Já as variáveis declaradas com let ou const dentro do escopo de bloco não são elevadas e só podem ser acessadas após a declaração.
+Outra diferença importante é que as variáveis declaradas com VAR dentro do escopo de FUNÇÃO são elevadas (hoisted) para o topo do escopo, o que significa que podem ser acessadas antes mesmo de serem declaradas. Já as variáveis declaradas com let ou const dentro do escopo de bloco não são elevadas e só podem ser acessadas após a declaração.
 
 Em resumo, enquanto o escopo de bloco e função têm algumas semelhanças, é importante entender as diferenças entre eles para escrever um código JavaScript eficiente e correto.
