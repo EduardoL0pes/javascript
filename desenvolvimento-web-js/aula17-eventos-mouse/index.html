@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos - Mouse</title>
+    <script>
+        /* Eventos:
+            onclick     - disparado quando clica
+            ondblclick  - disparado com double click
+            onmouseup   - disparado quando clica (obs: procurar ver a diferença entre onclick e onmouseup)
+            onmouseover - disparado quando o cursor do mouse 'passa' sobre o item
+            onmouseout  - disparado quando o cursor do mouse 'sai' de um item 
+        */
+        function acao1() {
+            alert('evento click disparado')
+        }
+
+        function acao2() {
+            alert('O cursor do mouse saiu da região do evento. VOLTE!!')
+        }
+    </script>
+</head>
+<body>
+    <div onclick="acao1()" onmouseout="acao2()" style="background-color: #ccc; height: 200px; width: 200px;"></div>
+</body>
+</html>
