@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando estilos de elementos</title>
+    <script>
+        function modificarEstilo(cordeFundo, l, a) {
+            document.getElementById('modificar').style.backgroundColor = cordeFundo
+            document.getElementById('modificar').style.width = l
+            document.getElementById('modificar').style.height = a
+        }
+    </script>
+</head>
+<body>
+    <button type="button" onclick="modificarEstilo('#FF0000', '200px')">Vermelho</button>
+    <button type="button" onclick="modificarEstilo('#00FF00', '100px', '100px')">Verde</button>
+    <button type="button" onclick="modificarEstilo('#0000FF', '50px', '50px')">Azul</button>
+    <hr>
+    <div style="border: 1px solid black; width: 150px; height: 150px;" id="modificar"></div>
+</body>
+</html>
