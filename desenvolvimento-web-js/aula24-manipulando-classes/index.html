@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando classes de elementos</title>
+    <style>
+        .estilo1 {
+            background-color: red;
+            color: white;
+        }
+
+        .estilo2 {
+            width: 400px;
+            height: 50px;
+            background-color: blue;
+            color: white;
+            padding: 10px;
+            font-size: 1.3em;
+            line-height: 50px;
+            text-align: center;
+        }
+
+        .estilo3 {
+            background-color: green;
+            color: white;
+            font-size: 1.2em;
+            width: 400px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+    <script>
+        function modificar() {
+            document.getElementById('mensagem').className = 'estilo2'
+        }
+
+        function modificarEstilo() {
+            document.getElementById('mensagem').className = 'estilo3'
+        }
+    </script>
+</head>
+<body>
+    <div id="mensagem" class="estilo1">Manipulando classes de elementos</div>
+    <hr>
+    <button type="button" onclick="modificar()" ondblclick="modificarEstilo()">Modificar</button>
+</body>
+</html>
