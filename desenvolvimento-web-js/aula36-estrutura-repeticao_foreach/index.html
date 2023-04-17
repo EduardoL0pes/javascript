@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrutura de repetição - Foreach</title>
+    <script>
+        var listaFuncionarios = ['Viviane', 'Eduardo' , 'Ricardo', 'Edivaldo', 'Meire', 'Lucas']
+
+        console.log(listaFuncionarios)
+        document.write(listaFuncionarios[5])
+
+        listaFuncionarios.forEach(function(valor, indice, array) {
+            //Lógica
+            console.log('indice: ' + indice + ' | valor: ' + valor)
+
+            if(valor == 'Lucas') {
+                array[indice] = 'Um novo valor'
+            }
+        })
+
+        console.log(listaFuncionarios)
+        document.write('<br>' + listaFuncionarios[5])
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
