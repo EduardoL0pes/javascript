@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrutura de repetição - For in</title>
+    <script>
+
+        //var listaConvidados = ['Jorge', 'Jamilton', 'José', 'Maria', 'Eduardo']
+
+        var listaConvidados = Array()
+
+        listaConvidados['a'] = 'Jorge'
+        listaConvidados[10] = 'Jamilton'
+        listaConvidados['zebra'] = 'José'
+        listaConvidados[true] = 'Maria'
+        listaConvidados[false] = 'Eduardo'
+        listaConvidados[-1] = 'Ricardo'
+
+        console.log(listaConvidados)
+
+        for(var x in listaConvidados) {
+            console.log('Índice ' + x + ' Valor ' + listaConvidados[x])
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
