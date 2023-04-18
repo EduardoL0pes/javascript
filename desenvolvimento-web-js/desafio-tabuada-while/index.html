@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio - Tabuada utlizando while</title>
+    <script>
+        var y = 0
+        
+        while(y <= 10) {
+            y++
+
+            if(y === 11 ) {
+                continue
+            } 
+
+            var x = 1
+
+            while(x <= 10) {
+                document.write(y + ' x ' + x + ' = ' + (y * x) + '<br>')
+                x++
+            }
+            document.write('<hr>')
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
