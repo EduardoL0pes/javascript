@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM - Timing</title>
+    <script>
+        /*
+            //Executa ação uma vez após o tempo informado
+        setTimeout(ação, tempo em milissegundos)
+        clearTimeout()
+
+
+            //Sempre executa a ação após o período informado
+        setInterval(ação, tempo em milissegundos)
+        clearInterval()
+        */
+
+
+        //setTimeout(function(){ document.write('teste')},2000)
+
+        var i = 5
+
+        var x = setInterval(function(){
+            document.write(i)
+            i -= 1
+
+            if( i === 0) {
+                alert('Sua sessão expirou, atualize sua página')
+                clearInterval(x)
+            }
+        }, 1000)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
