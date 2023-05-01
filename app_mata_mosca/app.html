@@ -11,6 +11,10 @@
 </head>
 <body onresize="ajusteTamanhoPalco()">
 
-    <script>posicaoRandomica()</script>
+    <script>
+        setInterval(function() {
+            posicaoRandomica()
+        }, 1000)
+    </script>
 </body>
 </html>
