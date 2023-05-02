@@ -1,5 +1,6 @@
 var altura = 0
 var largura = 0
+var vidas = 1
 
 function ajusteTamanhoPalco() {
     altura = window.innerHeight
@@ -14,6 +15,15 @@ function posicaoRandomica() {
     //remover o mosquito anterior (caso exista)
     if (document.getElementById('mosquito')) {
         document.getElementById('mosquito').remove()
+
+        if (vidas > 3) {
+            alert('Interromper o jogo (Game Over)')
+
+        } else {
+            document.getElementById('v' + vidas).src = "./imagens/coracao_vazio.png"
+
+            vidas++
+        }
     }
 
     var posicaoX = Math.floor(Math.random() * largura) - 90  //calcula o valor do palco do jogo definido anteriormente gerando valores aleatorios para que as moscas não vazem da tela do usuario
@@ -21,7 +31,7 @@ function posicaoRandomica() {
 
     posicaoX = posicaoX < 0 ? 0 : posicaoX
     posicaoY = posicaoY < 0 ? 0 : posicaoY
-    
+
     console.log(posicaoX, posicaoY)  //para fazer debug se tudo esta funcionando corretamente
 
     //criar o elemento html
@@ -32,35 +42,38 @@ function posicaoRandomica() {
     mosquito.style.top = posicaoY + 'px'
     mosquito.style.position = 'absolute'
     mosquito.id = 'mosquito'
+    mosquito.onclick = function () {
+        this.remove()
+    }
 
     document.body.appendChild(mosquito)
 }
 
 function tamanhoAleatorio() {
     var classe = Math.floor(Math.random() * 3) //random - cria numeros aleatorios de 0 ate +/- 3   //floor - retira a fração do numero tornando inteiro
-    
-    switch(classe) {
 
-        case 0: 
-            return('mosquito1')
+    switch (classe) {
 
-        case 1: 
-            return('mosquito2')
+        case 0:
+            return ('mosquito1')
+
+        case 1:
+            return ('mosquito2')
 
         case 2:
-            return('mosquito3')
+            return ('mosquito3')
     }
 }
 
 function ladoAleatorio() {
-    var classe = Math.floor(Math.random() * 2) 
-    
-    switch(classe) {
+    var classe = Math.floor(Math.random() * 2)
 
-        case 0: 
-            return('ladoA')
+    switch (classe) {
 
-        case 1: 
-            return('ladoB')
+        case 0:
+            return ('ladoA')
+
+        case 1:
+            return ('ladoB')
     }
 }
