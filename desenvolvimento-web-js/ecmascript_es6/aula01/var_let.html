@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Var e Let</title>
+    <script>
+        //3 escopos: Global, Função e Bloco
+
+        //Global
+        var serie = 'Game of Thrones'
+        console.log('Escopo global: ' + serie)
+
+        function x() {
+            //Função
+            console.log('Escopo de funcão: ' + serie)
+            if(true) {
+                console.log('Escopo de bloco dentro da função: ' + serie)
+
+            }
+        }
+
+        x()
+
+        if(true) {
+            //Bloco
+            console.log('Escopo de bloco: ' + serie)
+        }
+
+        /*Variaveis declarada no escopo global pode ser acessada pelo outros escopos funcao e bloco.
+        Variaveis tipo VAR sofre uma elevação(roinst) de escopo quando declarada.
+        A grande diferença entre VAR e LET é que let não sofre essa elevação podendo declarar ele em qualquer escopo. */
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
