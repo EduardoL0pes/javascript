@@ -29,8 +29,25 @@
         }
 
         /*Variaveis declarada no escopo global pode ser acessada pelo outros escopos funcao e bloco.
-        Variaveis tipo VAR sofre uma elevação(roinst) de escopo quando declarada.
+        Variaveis tipo VAR sofre uma elevação(roinst) de escopo quando declarada (somente em escopo de bloco).
         A grande diferença entre VAR e LET é que let não sofre essa elevação podendo declarar ele em qualquer escopo. */
+
+        var jogo = 'Donkey Kong'
+
+        {
+         //Bloco 'fake'
+            var jogo = 'Mario World'
+            console.log('Dentro do bloco ' + jogo)
+
+            let game = 'Metroid'
+            console.log('Declarada com let dentro do bloco: ' + game)
+        }
+        console.log('Fora do bloco ' + jogo)
+
+        let game = 'Doom'
+        console.log('Declarada com let fora do bloco: ' + game)
+
+        /*Utilizando a declaração VAR ele por sofrer uma elevação(roinst) ela sobrepoe a variavel declarada no escopo global pois o proprio browser 'salva' a ultima variavel declarada e com LET isso não aconteceria pois ela nao sofre essa elevação(roinst)*/
     </script>
 </head>
 <body>
