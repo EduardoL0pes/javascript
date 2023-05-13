@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Const</title>
+    <script>
+
+        const SERIE = 'From'
+
+        function x() {
+            const SERIE = 'Game of Thrones'
+            console.log('Escopo da funcao: ' + SERIE)
+        }
+
+        x()
+
+        console.log('Escopo global: ' + SERIE)
+
+        /*A principal diferença entre LET e CONST é que let pode ter seu valor reatribuido, enquanto uma variavel declarada com const não pode ter seu valor alterado após a sua declaração.
+        const seria mais usado quando o valor declarado não irá sofrer alguma alteração durante a execução do programa.
+        
+        ex.:
+
+        let x = 20
+        x = 10
+        console.log(x) //com isso o valor de let seria alterado para 10
+        
+        const y = 20
+        y = 10 
+        console.log(y) //com isso geraria um erro */
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
