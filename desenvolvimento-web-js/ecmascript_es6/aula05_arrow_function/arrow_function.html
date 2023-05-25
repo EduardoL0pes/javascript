@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+    <script>
+        /*
+        let quadrado = function(x = 5) { //mais conhecido no ES5
+            return x * x
+        }
+        
+        let quadrado = (x) => {
+            return x * x
+        }
+        
+        let quadrado = x => x * x //return implícito
+
+        document.write(quadrado(3))
+        */
+
+
+        /*
+        let parOuImpar = function(numero) {
+            if(numero % 2 === 0) {
+                return 'par'
+            } else {
+                return 'ímpar'
+            }
+        }
+        
+        let parOuImpar = numero => {
+            if(numero % 2 === 0) {
+                return 'par'
+            } else {
+                return 'ímpar'
+            }
+        }*/
+
+        let parOuImpar = numero => numero % 2 === 0 ? 'par' : 'ímpar' //return implícito   //" ifternário "
+        document.write(parOuImpar(8))
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
