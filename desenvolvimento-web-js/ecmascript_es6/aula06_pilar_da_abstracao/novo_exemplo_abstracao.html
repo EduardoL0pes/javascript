@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Abstração</title>
+    <script>
+       /* let cadeiras = [] //array
+
+        cadeiras[0] = Array()
+        cadeiras[0]['giratoria'] = false
+        cadeiras[0]['qtd_pernas'] = 4
+        cadeiras[0]['cor'] = 'azul'
+
+        cadeiras[1] = Array()
+        cadeiras[1]['giratoria'] = true
+        cadeiras[1]['qtd_pernas'] = 1
+        cadeiras[1]['cor'] = 'vermelho'
+
+        function girar_cadeira(indice) {
+            if(cadeiras[indice]['giratoria'] === true) {
+                console.log('Girou')
+            } else {
+                console.log('Cadeira não é giratória')
+            }
+        }
+
+        function adicionar_cadeira(giratoria, qtd_pernas, cor) {
+            let cadeira = Array()
+
+            cadeira['giratoria'] = giratoria
+            cadeira['qtd_pernas'] = qtd_pernas
+            cadeira['cor'] = cor
+
+            cadeiras.push(cadeira)
+        }
+        adicionar_cadeira(false, 3, 'verde')
+
+        console.log(cadeiras) */
+        //girar_cadeira(1)
+
+        //Paradigma de OO (Orientação a Objeto)
+        class Cadeira {
+            constructor(qtd_pernas, giratoria, cor) {
+                this.qtd_pernas = qtd_pernas
+                this.giratoria = giratoria
+                this.cor = cor
+            }
+
+            giraCadeira() {
+                if(this.giratoria === true) {
+                    console.log('Girou')
+                } else {
+                    console.log('Essa cadeira não é giratória')
+                }
+            }
+        }
+
+        let cadeiras = [] //array
+
+        cadeiras.push(new Cadeira(4, false, 'Verde'))
+        cadeiras.push(new Cadeira(1, true, 'Vermelha'))
+
+        console.log(cadeiras)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
