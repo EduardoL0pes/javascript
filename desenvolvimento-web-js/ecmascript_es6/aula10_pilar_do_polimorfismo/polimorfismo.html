@@ -47,13 +47,29 @@
             }
         }
 
+        class Gato extends Animal {
+            constructor(sabeMiar, cor, tamanho, peso) {
+                super(cor, tamanho, peso)
+                this.sabeMiar = sabeMiar
+            }
+        }
+
+        //Console.log Gato *********
+        let gato = new Gato(true, 'Cinza e Branco', 90, 200)
+        console.log(gato)
+        let gato2 = new Gato(true, 'Preto', 80, 250)
+        console.log(gato2)
+
+        /*
+        //Console.log Avestruz **********
         let avestruz = new Avestruz()
         console.log(avestruz)
         avestruz.enterrarCabeca()
         avestruz.voar()
-
+        
+        //Console.log Papagaio ************
         let papagaio = new Papagaio(true, 'Verde', 25, 350)
-        console.log(papagaio)
+        console.log(papagaio) */
     </script>
 </head>
 <body>
