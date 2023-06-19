@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obejtos literais melhorias de notação</title>
+    <script>
+        let nome = 'Eduardo'
+        let idade = 27
+        let sexo = 'Masculino'
+        let hobby = 'Jogar'
+
+        let objeto = {
+            nome: nome,
+            idade: idade,
+            sexo: sexo,
+            hobby: hobby,
+            exibirResumo: function() {
+                console.log(`Meu nome é ${this.nome} tenho ${this.idade} anos do sexo ${this.sexo} e meu hobby favorito é ${this.hobby}`)
+            }
+        }
+
+        console.log(objeto)
+        objeto.exibirResumo()
+
+        //--------------------------------------------- forma mais resumida 
+
+        let objeto2 = {
+            nome,  //nome = nome variável / valor = valor da variável 
+            idade,
+            sexo,
+            hobby,
+            exibirResumo() {
+                console.log(`Meu nome é ${this.nome} tenho ${this.idade} anos do sexo ${this.sexo} e meu hobby favorito é ${this.hobby}`)
+            }
+        }
+
+        console.log(objeto2)
+        objeto2.exibirResumo()
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
