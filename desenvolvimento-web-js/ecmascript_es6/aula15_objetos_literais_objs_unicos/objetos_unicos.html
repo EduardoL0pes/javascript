@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos literais - Objetos únicos</title>
+    <script>
+        let jogo = {
+            tipo: 'RPG',
+            valor: 255,
+            comprar() {
+                console.log('Efetuado')
+            }
+        }
+        console.log(jogo.valor)
+        jogo.comprar()
+
+        //---------------------- Alterando valor
+        let x = jogo
+        console.log(x.tipo)
+        x.tipo = 'Action, Adventure, Horror'
+        console.log(x.tipo)
+
+        console.log(jogo.tipo)
+
+        //----------------------- Adicionando novo atributo
+        x.nome = 'MHW'
+
+        console.log(x.nome)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
