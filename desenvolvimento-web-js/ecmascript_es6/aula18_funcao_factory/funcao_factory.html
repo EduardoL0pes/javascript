@@ -5,7 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Função Factory</title>
     <script>
-        
+          let bicicleta1 = {
+            cor: 'Verde',
+            marcha: 'Única',
+            aro: 18,
+            pedalar() {
+                console.log('Método pedalar executado')
+            }
+          } 
+
+          let bicicleta2 = {
+            cor: 'Vermelho',
+            marcha: '18',
+            aro: 20,
+            pedalar() { console.log('Método pedalar executado')}
+          }
+
+          //-------------------------------------------------------
+
+          let bicicletaFactory = function(cor, marcha, aro, tamanho) {
+            return {
+                cor,
+                marcha,
+                aro,
+                tamanho,
+                pedalar() {console.log('Método pedalar executado')}
+            }
+          }
+
+          let bicicleta3 = bicicletaFactory('Roxo', '20', 19, 'Grande')
+          console.log(bicicleta3)
+          let bicicleta4 = bicicletaFactory('Rosa', '25', 30, 'Médio')
+          
+          console.log(bicicleta4)
     </script>
 </head>
 <body>
