@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread e Rest</title>
+    <script>
+        //Contexto Rest
+
+        function soma(...param) {
+            let resultado = 0
+            //console.log(param)
+            param.forEach(v => resultado += v)
+
+            return resultado
+        }
+
+        console.log(soma(3, 5, 8, 52, 20, -12))
+
+        //-------------------------------------------
+        function multiplicador(m, ...p) {
+            let resultado = 0
+            //console.log(p)
+            //console.log(m)
+            p.forEach(v => resultado += m * v)
+
+            return resultado
+        }
+
+        console.log(multiplicador(2, 5, 12, 24, -10, 25))
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
