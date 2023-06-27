@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype</title>
+    <script>
+
+        Object.prototype.attr50 = 'Z' // cuidado em utilizar pois definindo em escopo global pode impactar na aplicação
+
+        let animal = { attr1: 'a'}
+        let vertebrado = { __proto__: animal, attr2: 'b' }
+        let ave = { __proto__: vertebrado, attr3: 'c', attr2: 'X' } //OBS: podendo tbm definir o msm attr na variavel o JS 'le' pelo escopo mais baixo
+
+        console.log(ave.attr2, ave.attr1, ave.attr3, ave.attr50)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
