@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring Assignment</title>
+    <script>
+        //Destructuring
+
+        let frutas = ['Abacaxi', 'Uva', 'Pera', 'Morango']
+        //let [a, b, , c] = frutas //Pular um indice
+        let [a, b, c, d, e = 'Banana'] = frutas
+
+        //console.log(a, b, c, d, e)
+
+        //-------------------------------------------------
+
+        let coisas = [['Abacaxi', 'Uva', 'Pera', 'Morango'],['Eduardo', 'Maria']]
+
+        //let [,p2] = coisas     // ele mostrara no console o array com os valores
+        let [,[,p2]] = coisas  //ele mostrara o valor escolhido dentro do array, nesse caso a 'Maria' apareceria no console.
+        console.log(p2)
+
+        let [[, , p],[edu]] = coisas
+        console.log(p, edu)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
