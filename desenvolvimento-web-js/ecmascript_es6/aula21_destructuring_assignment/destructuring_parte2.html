@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring Assignment</title>
+    <script>
+        let produto = {
+            descricao: 'Notebook',
+            preco: 1800,
+            detalhes: {
+                fabricante: 'Dell',
+                modelo: 'XPR'
+            }
+        }
+
+        //token
+        //Array  => []  
+        //Objeto => {}
+
+        //let {descricao, preco} = produto
+
+        //let {descricao: d, preco: p} = produto   //se houver a necessidade de alterar o nome do valor 
+
+        //let {descricao: d, preco: p, desconto: dd = 5} = produto //atribuindo valor em um atributo undefined e alterando seu nome
+
+        let {detalhes: {fabricante: f, modelo: m}} = produto //Acessando valor de um objeto literal dentro de um outro objeto literal
+
+        console.log(f, m)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
