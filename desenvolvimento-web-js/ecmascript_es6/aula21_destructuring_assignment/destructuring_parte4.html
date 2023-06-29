@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring Assignment</title>
+    <script>
+        //Array
+
+        let arr = [10, 20, 30, 40]
+
+        let [a, ...resto] = arr
+        
+        //console.log(a)
+        //console.log(resto)
+
+        //----------------------------------
+
+        //Objeto
+
+        let obj = {
+            aa: 10,
+            bb: 20,
+            cc: 30,
+            obj2: {
+                d:40,
+                e:50,
+                f:60,
+                g:70
+            }
+        }
+        let {aa, ...restoo} = obj
+        //console.log(aa)
+        //console.log(restoo)
+
+        let {obj2: {d, e, h = 80, ...x}} = obj
+        //console.log(d, e, h, x)
+
+
+        //exemplo mais simples ------------
+
+        let teste = {
+            a1: 10,
+            a2: 20,
+            a3: 30,
+            a4: 40
+        }
+
+        let {a1, ...rest} = teste
+        console.log(a1)
+        console.log(rest)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
