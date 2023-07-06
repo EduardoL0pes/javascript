@@ -108,8 +108,8 @@
         </div>
       </div>
 
-      <!-- Modal de erro -->
-      <div class="modal fade" id="erroGravacao" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <!-- Modal de erro 
+      <div class="modal fade" id="modalRegistrarDespesa" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header text-danger">
@@ -120,25 +120,24 @@
               Existem campos obrigatórios que não foram preenchidos.
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Voltar e corrigir</button>
+              <button type="button" class="btn btn-danger " data-bs-dismiss="modal">Voltar e corrigir</button>
             </div>
           </div>
         </div>
       </div>
+       --------------Para futuras consultas e entendimento -------------- -->
 
-      <!-- Modal de sucesso -->
-      <div class="modal fade" id="sucessoGravacao" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <!-- Modal -->
+      <div class="modal fade" id="modalRegistrarDespesa" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
-            <div class="modal-header text-success">
-              <h5 class="modal-title fs-5" id="exampleModalLabel">Registro inserido com sucesso</h5>
+            <div id="modal_titulo_div">
+              <h5 class="modal-title fs-5" id="modal_titulo"></h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
-              Despesa foi cadastrada com sucesso!
-            </div>
+            <div class="modal-body" id="modal_conteudo"></div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-success" data-bs-dismiss="modal">Voltar</button>
+              <button type="button" data-bs-dismiss="modal" id="btn_modal">Voltar</button>
             </div>
           </div>
         </div>
