@@ -92,6 +92,14 @@ function cadastrarDespesas() {
         document.getElementById('btn_modal').innerHTML = 'Voltar'
         document.getElementById('btn_modal').className = 'btn btn-success'
 
+        //limpar os campos após o registro
+        ano.value = ''
+        mes.value = ''
+        dia.value = ''
+        tipo.value = ''
+        descricao.value = ''
+        valor.value = ''
+
         //dialog de sucesso
         $('#modalRegistrarDespesa').modal('show')
     } else {
