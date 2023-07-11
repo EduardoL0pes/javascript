@@ -202,19 +202,23 @@ function carregaListaDespesas(despesas = Array(), filtro = false) {
         linha.insertCell(3).innerHTML = d.valor
 
         //criar botão de exclusão
-        let btn = document.createElement('button')
+        let btn = document.createElement("button")
         btn.className = 'btn btn-danger'
         btn.innerHTML = '<i class="fas fa-times"></i>'
-        btn.id = `id_despesa ${d.id}`
+        btn.id = `id_despesa_${d.id}`
         btn.onclick = function() {
             //remover a despesa
             let id = this.id.replace('id_despesa_', '')
+
+            //alert(id) //-- Para Debug
 
             bd.remover(id)
 
             window.location.reload()
         }
         linha.insertCell(4).append(btn)
+
+        //console.log(d) //-- Para Debug
     })
 }
 
